@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<script>
+//regex :var reg =/a/: reg1 = RegExp("a");reg.test("");
+    function validation(){
+        var email= document.getElementById("email").value
+        var password= document.getElementById("password").value
+        var name= document.getElementById("name").value
+        var reg= /^[a-zA-Z]+$/;
+        var validate=reg.test(name)
+        console.log(validate)
+        var regpass= /[@$!%&*()/^0-9]+$/
+        var validatepass=regpass.test(password)
+    var regemail= /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var validateemail=regemail.test(email)
+           
+        if(validate == false ||validateemail == false ||validatepass == false){
+            
+            alert("Sorry , It is not An Validate Form")}
+        else{
+            alert("Your Form Successfully Sign Up")
+        }
+}
+</script>
+</head>
+<body>
+    <form action="">
+        Name:
+        <input type="text" id="name">
+        Password:
+        <input type="password" id="password">
+        email: 
+        <input type="text" id="email">
+        <input type="Button" onclick="validation()" value="Sign-Up">
+    </form>
+    </body>
+</html>
+
